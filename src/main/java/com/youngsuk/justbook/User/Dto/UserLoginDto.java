@@ -1,6 +1,16 @@
-package com.youngsuk.justbook.User;
+package com.youngsuk.justbook.User.Dto;
 
-public class UserDto {
+public class UserLoginDto {
+  Long id;
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
   String email;
   String password;
 

@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class JpaUserRepository implements UserRepository {
+public class UserRepositoryJpa implements UserRepository {
 
   private EntityManager em;
 
@@ -18,5 +18,10 @@ public class JpaUserRepository implements UserRepository {
   public User save(User user) {
     em.persist(user);
     return user;
+  }
+
+  @Override
+  public User findById(Long id) {
+    return em.find(User.class, id);
   }
 }
