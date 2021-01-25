@@ -36,12 +36,14 @@ public class UserService {
     return userRepository.save(user);
   }
 
-  public void login(UserLoginDto userLoginDto) {
+  public boolean login(UserLoginDto userLoginDto) {
     User user = userRepository.findById(userLoginDto.getId());
     boolean isLoginSuccess = passwordEncoder.matches(userLoginDto.getPassword(), user.getPassword());
 
     if (!isLoginSuccess) {
       throw new BadCredentialsException("비밀번호가 일치하지 않습니다");
+    } else {
+      return isLoginSuccess;
     }
   }
 }
