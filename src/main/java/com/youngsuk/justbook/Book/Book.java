@@ -18,7 +18,7 @@ public class Book {
   private String category;
 
   @ManyToOne
-  @JoinColumn(name = "id", referencedColumnName = "id", insertable = false, updatable = false)
+  @JoinColumn(name = "category_id")
   private BookCategory bookCategory;
 
   private String author;
