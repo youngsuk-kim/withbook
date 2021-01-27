@@ -13,7 +13,7 @@ public enum BookCategoryEnum {
   소설("8"),
   기타("9");
 
-  private String id;
+  private final String id;
 
   BookCategoryEnum(String id) {
     this.id = id;
