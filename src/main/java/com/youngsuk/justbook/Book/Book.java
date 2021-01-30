@@ -1,5 +1,6 @@
 package com.youngsuk.justbook.Book;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,18 +10,19 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Book {
+  @JsonProperty
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
-
+  @JsonProperty
   private String title;
-
+  @JsonProperty
   private String category;
 
   @ManyToOne
   @JoinColumn(name = "category_id")
   private BookCategory bookCategory;
-
+  @JsonProperty
   private String author;
 
   public BookCategory getBookCategory() {
@@ -30,9 +32,9 @@ public class Book {
   public void setBookCategory(BookCategory bookCategory) {
     this.bookCategory = bookCategory;
   }
-
+  @JsonProperty
   private float rating;
-
+  @JsonProperty
   private int price;
 
   public String getCategory() {
@@ -58,9 +60,9 @@ public class Book {
   public void setStockQuantity(int stockQuantity) {
     this.stockQuantity = stockQuantity;
   }
-
+  @JsonProperty
   private int stockQuantity;
-
+  @JsonProperty
   private String imgUrl;
 
   public Integer getId() {

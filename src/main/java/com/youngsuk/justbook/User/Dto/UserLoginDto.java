@@ -2,6 +2,8 @@ package com.youngsuk.justbook.User.Dto;
 
 public class UserLoginDto {
   Long id;
+  String email;
+  String password;
 
   public Long getId() {
     return id;
@@ -10,9 +12,6 @@ public class UserLoginDto {
   public void setId(Long id) {
     this.id = id;
   }
-
-  String email;
-  String password;
 
   public String getEmail() {
     return email;
