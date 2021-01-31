@@ -1,10 +1,10 @@
-Skill
+## Skill
 - Java 8
 - Spring boot
 - MySQL
 - Redis
 
-USER STORY
+## USER STORY
 - 사용자는 회원 가입을 할 수 있다
 - 사용자는 로그인을 할 수 있다
 - 사용자는 카테고리 목록을 조회할 수 있다
