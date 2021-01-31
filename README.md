@@ -4,6 +4,13 @@
 - MySQL
 - Redis
 
+## Blog posting
+Scale out에 적합한 로그인 환경에 대해 검토한 글 (https://www.notion.so/Scale-out-614a22373387474b90eb988b1475b67c)
+서버의 장애를 대비한 확장 방법 검토하기(https://www.notion.so/d3017d5a5bf14a2e9d6e1675f2f670a2)
+
+## FrontEnd Repository Link (React)
+https://github.com/youngsuk-kim/withbook-client
+
 ## USER STORY
 - 사용자는 책 리뷰를 기준으로 책 순위를 확인할 수 있다
 - 사용자는 회원 가입을 할 수 있다
