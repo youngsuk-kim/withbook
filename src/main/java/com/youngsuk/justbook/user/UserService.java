@@ -1,7 +1,7 @@
-package com.youngsuk.justbook.User;
+package com.youngsuk.justbook.user;
 
-import com.youngsuk.justbook.User.Dto.UserDto;
-import com.youngsuk.justbook.User.Dto.UserLoginDto;
+import com.youngsuk.justbook.user.dto.UserDto;
+import com.youngsuk.justbook.user.dto.UserLoginDto;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;

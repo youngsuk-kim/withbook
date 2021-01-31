@@ -1,4 +1,4 @@
-package com.youngsuk.justbook.User;
+package com.youngsuk.justbook.user;
 
 public interface UserRepository {
   User save(User user);

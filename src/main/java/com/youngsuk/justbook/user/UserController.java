@@ -1,7 +1,7 @@
-package com.youngsuk.justbook.User;
+package com.youngsuk.justbook.user;
 
-import com.youngsuk.justbook.User.Dto.UserDto;
-import com.youngsuk.justbook.User.Dto.UserLoginDto;
+import com.youngsuk.justbook.user.dto.UserDto;
+import com.youngsuk.justbook.user.dto.UserLoginDto;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +22,7 @@ public class UserController {
 
   @PostMapping("/register")
   public User register(@RequestBody UserDto userDto) {
+    System.out.println(userDto.toString());
     return userService.register(userDto);
   }
 

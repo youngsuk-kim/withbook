@@ -1,4 +1,4 @@
-package com.youngsuk.justbook.Book;
+package com.youngsuk.justbook.book;
 
 import java.util.List;
 import org.springframework.data.domain.Pageable;
@@ -10,4 +10,7 @@ public interface BookRepository extends PagingAndSortingRepository<Book, Integer
   List<String> findBookCategory();
 
   List<Book> findBookByCategory(String category, Pageable pageable);
+
+  @Query("SELECT b FROM Book b WHERE CONCAT(b.title, b.author) LIKE %:keyword%")
+  List<Book> findBooksByKeyword(String keyword, Pageable pageable);
 }

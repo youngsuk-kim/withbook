@@ -1,4 +1,4 @@
-package com.youngsuk.justbook.User;
+package com.youngsuk.justbook.user;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

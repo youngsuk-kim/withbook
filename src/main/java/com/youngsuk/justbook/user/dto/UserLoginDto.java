@@ -1,4 +1,4 @@
-package com.youngsuk.justbook.User.Dto;
+package com.youngsuk.justbook.user.dto;
 
 public class UserLoginDto {
   Long id;

@@ -1,17 +1,17 @@
-package com.youngsuk.justbook.Book;
+package com.youngsuk.justbook.book;
 
 import java.util.Arrays;
 
 public enum BookCategoryEnum {
-  인문("1"),
-  참고서("2"),
   IT("3"),
-  자기계발("4"),
+  경제("7"),
+  기타("9"),
+  소설("8"),
   심리("5"),
   역사("6"),
-  경제("7"),
-  소설("8"),
-  기타("9");
+  인문("1"),
+  자기계발("4"),
+  참고서("2");
 
   private final String id;
 

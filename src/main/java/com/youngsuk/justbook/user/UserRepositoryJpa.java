@@ -1,4 +1,4 @@
-package com.youngsuk.justbook.User;
+package com.youngsuk.justbook.user;
 
 import javax.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;

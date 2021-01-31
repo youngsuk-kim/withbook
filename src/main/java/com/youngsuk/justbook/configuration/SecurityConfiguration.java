@@ -1,4 +1,4 @@
-package com.youngsuk.justbook.Configuration;
+package com.youngsuk.justbook.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

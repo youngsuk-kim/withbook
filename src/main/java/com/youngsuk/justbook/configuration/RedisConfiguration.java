@@ -1,4 +1,4 @@
-package com.youngsuk.justbook.Configuration;
+package com.youngsuk.justbook.configuration;
 
 import java.time.Duration;
 import org.springframework.beans.factory.annotation.Value;
@@ -51,5 +51,4 @@ public class RedisConfiguration {
         .cacheDefaults(redisCacheConfiguration)
         .build();
   }
-
 }
