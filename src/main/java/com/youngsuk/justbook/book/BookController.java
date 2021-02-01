@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
-@RequestMapping("/book")
+@RequestMapping("/book/category")
 public class BookController {
 
   private BookService bookService;
@@ -20,23 +20,23 @@ public class BookController {
     this.bookService = bookService;
   }
 
-  @GetMapping("/category")
+  @GetMapping()
   public List<String> getAllCategoryName() {
     return bookService.getAllCategoryName();
   }
 
-  @GetMapping("/category/rating")
+  @GetMapping("rating")
   public BookPagingDto getBookSortByRating(@RequestParam Integer page) {
     // 평점 순서대로 책 데이터를 가져올때 페이징을 통해 데이터를 전달하기 위해 page를 넘겨주었다.
     return bookService.getBookSortByRating(page);
   }
 
-  @GetMapping("/category/{id}")
+  @GetMapping("{id}")
   public List<Book> getBookByCategory(@PathVariable String id, Pageable pageable) {
     return bookService.getBookByCategory(id, pageable);
   }
 
-  @GetMapping("/category/search")
+  @GetMapping("search")
   public List<Book> search(@RequestParam String keyword, Pageable pageable) {
     return bookService.search(keyword, pageable);
   }
