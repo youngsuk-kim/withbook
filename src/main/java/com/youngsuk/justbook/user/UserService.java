@@ -2,6 +2,7 @@ package com.youngsuk.justbook.user;
 
 import com.youngsuk.justbook.user.dto.UserDto;
 import com.youngsuk.justbook.user.dto.UserLoginDto;
+import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -37,13 +38,14 @@ public class UserService {
   }
 
   public boolean login(UserLoginDto userLoginDto) {
-    User user = userRepository.findById(userLoginDto.getId());
-    boolean isLoginSuccess = passwordEncoder.matches(userLoginDto.getPassword(), user.getPassword());
+    Optional<User> user = userRepository.findById(userLoginDto.getId());
+    boolean isLoginSuccess =
+        passwordEncoder.matches(userLoginDto.getPassword(), user.orElse(null).getPassword());
 
     if (!isLoginSuccess) {
       throw new BadCredentialsException("비밀번호가 일치하지 않습니다");
     } else {
-      return isLoginSuccess;
+      return true;
     }
   }
 }

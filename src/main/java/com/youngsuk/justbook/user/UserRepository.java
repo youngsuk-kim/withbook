@@ -1,7 +1,8 @@
 package com.youngsuk.justbook.user;
 
-public interface UserRepository {
-  User save(User user);
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-  User findById(Long id);
+@Repository
+public interface UserRepository extends CrudRepository<User, Integer> {
 }
