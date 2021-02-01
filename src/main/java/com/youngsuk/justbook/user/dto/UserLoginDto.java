@@ -1,9 +1,9 @@
 package com.youngsuk.justbook.user.dto;
 
 public class UserLoginDto {
-  Long id;
-  String email;
-  String password;
+  private Long id;
+  private String email;
+  private String password;
 
   public Long getId() {
     return id;

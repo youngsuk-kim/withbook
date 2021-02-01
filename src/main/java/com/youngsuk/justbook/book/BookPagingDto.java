@@ -5,8 +5,8 @@ import lombok.Getter;
 
 @Getter
 public class BookPagingDto {
-  List<Book> book;
-  Integer totalPage;
+  private List<Book> book;
+  private Integer totalPage;
 
   public BookPagingDto() {}
 

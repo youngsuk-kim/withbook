@@ -31,8 +31,8 @@ public class BookService {
 
   @Cacheable(value = "bookCategory")
   public List<Book> getBookByCategory(String id, Pageable pageable) {
-    BookCategoryEnum categoryName = BookCategoryEnum.fromId(id);
-    return bookRepository.findBookByCategory(categoryName.name(), pageable);
+    BookCategoryEnum category = BookCategoryEnum.fromId(id);
+    return bookRepository.findBookByCategory(category.name(), pageable);
   }
 
   @Cacheable(value = "allCategory")
