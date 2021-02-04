@@ -48,4 +48,13 @@ public class UserService {
       return true;
     }
   }
+
+  public User getUserOne(Long id) {
+    return userRepository.findById(id)
+        .orElse(null);
+  }
+
+  @LoginCheck
+  public void userInfoUpdate() {
+  }
 }

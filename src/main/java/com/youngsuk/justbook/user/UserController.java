@@ -4,6 +4,7 @@ import com.youngsuk.justbook.user.dto.UserDto;
 import com.youngsuk.justbook.user.dto.UserLoginDto;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,5 +36,10 @@ public class UserController {
       httpSession.setAttribute("user", userLoginDto.getEmail());
     }
     return isLoginSuccess;
+  }
+
+  @LoginCheck
+  @PatchMapping
+  public void userInfoUpdate() {
   }
 }
