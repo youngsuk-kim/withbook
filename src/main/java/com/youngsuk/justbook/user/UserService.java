@@ -55,7 +55,6 @@ public class UserService {
         userRepository
             .findById(userUpdateDto.getId())
             .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + userUpdateDto.getId()));
-    System.out.println(user.getEmail());
     user.update(
         userUpdateDto.getEmail(),
         userUpdateDto.getPhoneNumber(),

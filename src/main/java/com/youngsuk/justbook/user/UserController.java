@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("api/users")
 public class UserController {
 
   private UserService userService;
@@ -29,7 +30,7 @@ public class UserController {
   }
 
   @PostMapping("/login")
-  public boolean login(HttpSession httpSession, @RequestBody UserLoginDto userLoginDto) {
+  public boolean login(@RequestParam UserLoginDto userLoginDto, HttpSession httpSession) {
     boolean isLoginSuccess;
 
     isLoginSuccess = userService.login(userLoginDto);
@@ -42,7 +43,6 @@ public class UserController {
   @LoginCheck
   @PatchMapping
   public User userInfoUpdate(HttpSession httpSession, @RequestBody UserUpdateDto userUpdateDto) {
-    System.out.println(userUpdateDto.getEmail());
     return userService.userInfoUpdate(userUpdateDto);
   }
 }
