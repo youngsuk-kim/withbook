@@ -2,6 +2,7 @@ package com.youngsuk.justbook.user;
 
 import com.youngsuk.justbook.user.dto.UserDto;
 import com.youngsuk.justbook.user.dto.UserLoginDto;
+import com.youngsuk.justbook.user.dto.UserUpdateDto;
 import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,12 +50,18 @@ public class UserService {
     }
   }
 
-  public User getUserOne(Long id) {
-    return userRepository.findById(id)
-        .orElse(null);
-  }
+  public User userInfoUpdate(UserUpdateDto userUpdateDto) {
+    User user =
+        userRepository
+            .findById(userUpdateDto.getId())
+            .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + userUpdateDto.getId()));
+    System.out.println(user.getEmail());
+    user.update(
+        userUpdateDto.getEmail(),
+        userUpdateDto.getPhoneNumber(),
+        userUpdateDto.getAddress());
 
-  @LoginCheck
-  public void userInfoUpdate() {
+    userRepository.save(user);
+    return user;
   }
 }

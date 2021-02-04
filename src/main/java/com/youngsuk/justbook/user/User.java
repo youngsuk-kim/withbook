@@ -27,6 +27,12 @@ public class User {
 
   private String address;
 
+  public void update(String email, String phoneNumber, String address) {
+    this.email = email;
+    this.phoneNumber = phoneNumber;
+    this.address = address;
+  }
+
   public String getPhoneNumber() {
     return phoneNumber;
   }

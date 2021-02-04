@@ -2,6 +2,7 @@ package com.youngsuk.justbook.user;
 
 import com.youngsuk.justbook.user.dto.UserDto;
 import com.youngsuk.justbook.user.dto.UserLoginDto;
+import com.youngsuk.justbook.user.dto.UserUpdateDto;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -40,6 +41,8 @@ public class UserController {
 
   @LoginCheck
   @PatchMapping
-  public void userInfoUpdate() {
+  public User userInfoUpdate(HttpSession httpSession, @RequestBody UserUpdateDto userUpdateDto) {
+    System.out.println(userUpdateDto.getEmail());
+    return userService.userInfoUpdate(userUpdateDto);
   }
 }
