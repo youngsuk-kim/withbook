@@ -1,5 +1,6 @@
 package com.youngsuk.justbook.user;
 
+import com.youngsuk.justbook.domain.User;
 import com.youngsuk.justbook.user.dto.UserDto;
 import com.youngsuk.justbook.user.dto.UserLoginDto;
 import com.youngsuk.justbook.user.dto.UserUpdateDto;

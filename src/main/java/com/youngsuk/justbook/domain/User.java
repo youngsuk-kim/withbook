@@ -1,5 +1,6 @@
-package com.youngsuk.justbook.user;
+package com.youngsuk.justbook.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,14 +18,19 @@ public class User {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "USER_ID")
   private Long id;
 
+  @Column(name = "EMAIL")
   private String email;
 
+  @Column(name = "PASSWORD")
   private String password;
 
+  @Column(name = "PHONE_NUMBER")
   private String phoneNumber;
 
+  @Column(name = "ADDRESS")
   private String address;
 
   public void update(String email, String phoneNumber, String address) {

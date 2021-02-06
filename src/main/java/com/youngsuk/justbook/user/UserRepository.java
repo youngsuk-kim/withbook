@@ -1,5 +1,6 @@
 package com.youngsuk.justbook.user;
 
+import com.youngsuk.justbook.domain.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

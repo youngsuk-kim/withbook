@@ -1,5 +1,6 @@
 package com.youngsuk.justbook.book;
 
+import com.youngsuk.justbook.domain.Book;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
